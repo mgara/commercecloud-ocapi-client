@@ -46,8 +46,9 @@ export default class CustomersApi {
     * @param {module:ApiClient} apiClient Optional API client implementation to use,
     * default to {@link module:ApiClient#instance} if unspecified.
     */
-    constructor(apiClient) {
+    constructor(apiClient, extraParams) {
         this.apiClient = apiClient || ApiClient.instance
+        this.extraParams = extraParams || {}
     }
 
 
@@ -1535,10 +1536,10 @@ export default class CustomersApi {
 
         const pathParams = {
         }
-        const queryParams = {
-        }
+        const queryParams = this.extraParams.queryParams || {}
+
         const headerParams = {
-            Authorization: opts.authorization
+            Authorization: opts.authorization,...this.extraParams.headerParams
         }
         const formParams = {
         }
@@ -1695,6 +1696,7 @@ export default class CustomersApi {
             customer_id: customerId
         }
         const queryParams = {
+
         }
         const headerParams = {
         }

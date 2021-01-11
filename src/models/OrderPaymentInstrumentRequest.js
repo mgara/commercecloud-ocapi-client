@@ -59,10 +59,6 @@ export default class OrderPaymentInstrumentRequest {
         if (data) {
             obj = obj || new OrderPaymentInstrumentRequest()
 
-
-
-
-
             if (data.hasOwnProperty('amount')) {
                 obj.amount = ApiClient.convertToType(data.amount, 'Number')
             }
@@ -86,6 +82,13 @@ export default class OrderPaymentInstrumentRequest {
             }
             if (data.hasOwnProperty('payment_method_id')) {
                 obj.payment_method_id = ApiClient.convertToType(data.payment_method_id, 'String')
+            }
+
+            if (data.hasOwnProperty('c_captureContextKey')) {
+                obj.c_captureContextKey = ApiClient.convertToType(data.c_captureContextKey, 'String')
+            }
+            if (data.hasOwnProperty('c_microformToken')) {
+                obj.c_microformToken = ApiClient.convertToType(data.c_microformToken, 'String')
             }
         }
         return obj
