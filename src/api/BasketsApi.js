@@ -533,8 +533,8 @@ export default class BasketsApi {
      * @param {String} basketId the id of the basket to be retrieved
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/Basket}
      */
-    getBasketsByID(basketId,opts) {
-        return this.getBasketsByIDWithHttpInfo(basketId,opts)
+    getBasketsByID(basketId, opts) {
+        return this.getBasketsByIDWithHttpInfo(basketId, opts)
             .then((response_and_data) => {
                 return response_and_data.data
             })
@@ -694,8 +694,7 @@ export default class BasketsApi {
      * @param {String} shipmentId the id of the shipment
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/ShippingMethodResult} and HTTP response
      */
-    getBasketsByIDShipmentsByIDShippingMethodsWithHttpInfo(basketId, shipmentId, opts) {
-        opts = opts || {}
+    getBasketsByIDShipmentsByIDShippingMethodsWithHttpInfo(basketId, shipmentId) {
 
         const postBody = null
 
@@ -739,8 +738,8 @@ export default class BasketsApi {
      * @param {String} shipmentId the id of the shipment
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/ShippingMethodResult}
      */
-    getBasketsByIDShipmentsByIDShippingMethods(basketId, shipmentId, opts) {
-        return this.getBasketsByIDShipmentsByIDShippingMethodsWithHttpInfo(basketId, shipmentId, opts)
+    getBasketsByIDShipmentsByIDShippingMethods(basketId, shipmentId) {
+        return this.getBasketsByIDShipmentsByIDShippingMethodsWithHttpInfo(basketId, shipmentId)
             .then((response_and_data) => {
                 return response_and_data.data
             })
@@ -938,7 +937,7 @@ export default class BasketsApi {
      * @param {module:models/BasketPaymentInstrumentRequest} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/Basket} and HTTP response
      */
-    patchBasketsByIDPaymentInstrumentsByIDWithHttpInfo(basketId, paymentInstrumentId, body,opts) {
+    patchBasketsByIDPaymentInstrumentsByIDWithHttpInfo(basketId, paymentInstrumentId, body) {
         const postBody = body
 
         // verify the required parameter 'basketId' is set
@@ -963,7 +962,7 @@ export default class BasketsApi {
         }
         const queryParams = this.extraParams.queryParams || {
         }
-        const headerParams =this.extraParams.headerParams || {
+        const headerParams = this.extraParams.headerParams || {
         }
         const formParams = {
         }
@@ -987,8 +986,8 @@ export default class BasketsApi {
      * @param {module:models/BasketPaymentInstrumentRequest} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/Basket}
      */
-    patchBasketsByIDPaymentInstrumentsByID(basketId, paymentInstrumentId, body,opts) {
-        return this.patchBasketsByIDPaymentInstrumentsByIDWithHttpInfo(basketId, paymentInstrumentId, body,opts)
+    patchBasketsByIDPaymentInstrumentsByID(basketId, paymentInstrumentId, body, opts) {
+        return this.patchBasketsByIDPaymentInstrumentsByIDWithHttpInfo(basketId, paymentInstrumentId, body, opts)
             .then((response_and_data) => {
                 return response_and_data.data
             })
@@ -1174,7 +1173,7 @@ export default class BasketsApi {
      * @param {module:models/CouponItem} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/Basket} and HTTP response
      */
-    postBasketsByIDCouponsWithHttpInfo(basketId, body,opts) {
+    postBasketsByIDCouponsWithHttpInfo(basketId, body) {
         const postBody = body
 
         // verify the required parameter 'basketId' is set
@@ -1216,8 +1215,8 @@ export default class BasketsApi {
      * @param {module:models/CouponItem} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/Basket}
      */
-    postBasketsByIDCoupons(basketId, body,opts) {
-        return this.postBasketsByIDCouponsWithHttpInfo(basketId, body,opts)
+    postBasketsByIDCoupons(basketId, body, opts) {
+        return this.postBasketsByIDCouponsWithHttpInfo(basketId, body, opts)
             .then((response_and_data) => {
                 return response_and_data.data
             })
@@ -1230,7 +1229,7 @@ export default class BasketsApi {
      * @param {module:models/GiftCertificateItem} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/Basket} and HTTP response
      */
-    postBasketsByIDGiftCertificateItemsWithHttpInfo(basketId, body,opts) {
+    postBasketsByIDGiftCertificateItemsWithHttpInfo(basketId, body) {
         const postBody = body
 
         // verify the required parameter 'basketId' is set
@@ -1270,8 +1269,8 @@ export default class BasketsApi {
      * @param {module:models/GiftCertificateItem} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/Basket}
      */
-    postBasketsByIDGiftCertificateItems(basketId, body,opts) {
-        return this.postBasketsByIDGiftCertificateItemsWithHttpInfo(basketId, body,opts)
+    postBasketsByIDGiftCertificateItems(basketId, body, opts) {
+        return this.postBasketsByIDGiftCertificateItemsWithHttpInfo(basketId, body, opts)
             .then((response_and_data) => {
                 return response_and_data.data
             })
@@ -1284,7 +1283,7 @@ export default class BasketsApi {
      * @param {module:models/ProductItem} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/Basket} and HTTP response
      */
-    postBasketsByIDItemsWithHttpInfo(basketId, body,opts) {
+    postBasketsByIDItemsWithHttpInfo(basketId, body) {
         const postBody = body
 
         // verify the required parameter 'basketId' is set
@@ -1324,8 +1323,8 @@ export default class BasketsApi {
      * @param {module:models/ProductItem} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/Basket}
      */
-    postBasketsByIDItems(basketId, body,opts) {
-        return this.postBasketsByIDItemsWithHttpInfo(basketId, body,opts)
+    postBasketsByIDItems(basketId, body, opts) {
+        return this.postBasketsByIDItemsWithHttpInfo(basketId, body, opts)
             .then((response_and_data) => {
                 return response_and_data.data
             })
@@ -1394,7 +1393,7 @@ export default class BasketsApi {
      * @param {module:models/BasketPaymentInstrumentRequest} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/Basket} and HTTP response
      */
-    postBasketsByIDPaymentInstrumentsWithHttpInfo(basketId, body,opts) {
+    postBasketsByIDPaymentInstrumentsWithHttpInfo(basketId, body) {
         const postBody = body
 
         // verify the required parameter 'basketId' is set
@@ -1434,8 +1433,8 @@ export default class BasketsApi {
      * @param {module:models/BasketPaymentInstrumentRequest} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/Basket}
      */
-    postBasketsByIDPaymentInstruments(basketId, body,opts) {
-        return this.postBasketsByIDPaymentInstrumentsWithHttpInfo(basketId, body,opts)
+    postBasketsByIDPaymentInstruments(basketId, body, opts) {
+        return this.postBasketsByIDPaymentInstrumentsWithHttpInfo(basketId, body, opts)
             .then((response_and_data) => {
                 return response_and_data.data
             })
@@ -1504,7 +1503,7 @@ export default class BasketsApi {
      * @param {module:models/Shipment} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/Basket} and HTTP response
      */
-    postBasketsByIDShipmentsWithHttpInfo(basketId, body,opts) {
+    postBasketsByIDShipmentsWithHttpInfo(basketId, body) {
         const postBody = body
 
         // verify the required parameter 'basketId' is set
@@ -1544,8 +1543,8 @@ export default class BasketsApi {
      * @param {module:models/Shipment} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/Basket}
      */
-    postBasketsByIDShipments(basketId, body,opts) {
-        return this.postBasketsByIDShipmentsWithHttpInfo(basketId, body,opts)
+    postBasketsByIDShipments(basketId, body, opts) {
+        return this.postBasketsByIDShipmentsWithHttpInfo(basketId, body, opts)
             .then((response_and_data) => {
                 return response_and_data.data
             })
@@ -1674,7 +1673,7 @@ export default class BasketsApi {
 
         const queryParams = {
             use_as_shipping: opts.useAsShipping,
-            customer_address_id: opts.customerAddressId,...this.extraParams.queryParams
+            customer_address_id: opts.customerAddressId, ...this.extraParams.queryParams
         }
         const headerParams = this.extraParams.headerParams || {}
         const formParams = {
@@ -1715,7 +1714,7 @@ export default class BasketsApi {
      * @param {module:models/CustomerInfo} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/Basket} and HTTP response
      */
-    putBasketsByIDCustomerWithHttpInfo(basketId, body, opts) {
+    putBasketsByIDCustomerWithHttpInfo(basketId, body) {
         const postBody = body
 
         // verify the required parameter 'basketId' is set
@@ -1757,7 +1756,7 @@ export default class BasketsApi {
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/Basket}
      */
     putBasketsByIDCustomer(basketId, body) {
-        return this.putBasketsByIDCustomerWithHttpInfo(basketId, body, opts)
+        return this.putBasketsByIDCustomerWithHttpInfo(basketId, body)
             .then((response_and_data) => {
                 return response_and_data.data
             })
@@ -1804,7 +1803,7 @@ export default class BasketsApi {
             customer_address_id: opts.customerAddressId, ...this.extraParams.queryParams
         }
 
-        
+
         const headerParams = this.extraParams.headerParams || {}
 
         const formParams = {
@@ -1847,7 +1846,7 @@ export default class BasketsApi {
      * @param {module:models/ShippingMethod} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/Basket} and HTTP response
      */
-    putBasketsByIDShipmentsByIDShippingMethodWithHttpInfo(basketId, shipmentId, body, opts) {
+    putBasketsByIDShipmentsByIDShippingMethodWithHttpInfo(basketId, shipmentId, body) {
         const postBody = body
 
         // verify the required parameter 'basketId' is set
@@ -1872,7 +1871,7 @@ export default class BasketsApi {
         }
         const queryParams = this.extraParams.queryParams || {
         }
-        const headerParams = this.extraParams.headerParams ||  {
+        const headerParams = this.extraParams.headerParams || {
         }
         const formParams = {
         }

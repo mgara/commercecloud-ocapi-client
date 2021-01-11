@@ -1539,7 +1539,7 @@ export default class CustomersApi {
         const queryParams = this.extraParams.queryParams || {}
 
         const headerParams = {
-            Authorization: opts.authorization,...this.extraParams.headerParams
+            Authorization: opts.authorization, ...this.extraParams.headerParams
         }
         const formParams = {
         }

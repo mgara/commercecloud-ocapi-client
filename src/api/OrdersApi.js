@@ -35,7 +35,7 @@ export default class OrdersApi {
     * @param {module:ApiClient} apiClient Optional API client implementation to use,
     * default to {@link module:ApiClient#instance} if unspecified.
     */
-    constructor(apiClient) {
+    constructor(apiClient, extraParams) {
         this.apiClient = apiClient || ApiClient.instance
         this.extraParams = extraParams || {}
     }
@@ -309,7 +309,7 @@ export default class OrdersApi {
      * @param {module:models/Order} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/Order} and HTTP response
      */
-    patchOrdersByIDWithHttpInfo(orderNo, body,opts) {
+    patchOrdersByIDWithHttpInfo(orderNo, body) {
         const postBody = body
 
         // verify the required parameter 'orderNo' is set
@@ -328,7 +328,7 @@ export default class OrdersApi {
         }
         const queryParams = this.extraParams.queryParams || {
         }
-        const headerParams = this.extraParams.headerParams ||  {
+        const headerParams = this.extraParams.headerParams || {
         }
         const formParams = {
         }
@@ -351,8 +351,8 @@ export default class OrdersApi {
      * @param {module:models/Order} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/Order}
      */
-    patchOrdersByID(orderNo, body,opts) {
-        return this.patchOrdersByIDWithHttpInfo(orderNo, body,opts)
+    patchOrdersByID(orderNo, body, opts) {
+        return this.patchOrdersByIDWithHttpInfo(orderNo, body, opts)
             .then((response_and_data) => {
                 return response_and_data.data
             })
@@ -393,7 +393,7 @@ export default class OrdersApi {
             payment_instrument_id: paymentInstrumentId
         }
         const queryParams = {
-            skip_authorization: opts.skipAuthorization,...this.extraParams.queryParams
+            skip_authorization: opts.skipAuthorization, ...this.extraParams.queryParams
         }
         const headerParams = this.extraParams.headerParams || {}
         const formParams = {
@@ -433,7 +433,7 @@ export default class OrdersApi {
      * @param {module:models/Basket} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:models/Order} and HTTP response
      */
-    postOrdersWithHttpInfo(body,opts) {
+    postOrdersWithHttpInfo(body) {
         const postBody = body
 
         // verify the required parameter 'body' is set
@@ -468,8 +468,8 @@ export default class OrdersApi {
      * @param {module:models/Basket} body
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:models/Order}
      */
-    postOrders(body,opts) {
-        return this.postOrdersWithHttpInfo(body,opts)
+    postOrders(body, opts) {
+        return this.postOrdersWithHttpInfo(body, opts)
             .then((response_and_data) => {
                 return response_and_data.data
             })
@@ -559,9 +559,9 @@ export default class OrdersApi {
             order_no: orderNo
         }
         const queryParams = {
-            skip_authorization: opts.skipAuthorization,...this.extraParams.queryParams
+            skip_authorization: opts.skipAuthorization, ...this.extraParams.queryParams
         }
-        const headerParams =this.extraParams.headerParams ||  {
+        const headerParams = this.extraParams.headerParams || {
         }
         const formParams = {
         }
