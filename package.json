@@ -1,6 +1,6 @@
 {
   "name": "@mgara/commercecloud-ocapi-client",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "An ES6 JavaScript Client for Salesforce Open Commerce API",
   "repository": "https://github.com/mgara/commercecloud-ocapi-client",
   "license": "SEE LICENSE IN LICENSE",
