@@ -1673,9 +1673,11 @@ export default class BasketsApi {
 
         const queryParams = {
             use_as_shipping: opts.useAsShipping,
-            customer_address_id: opts.customerAddressId, ...this.extraParams.queryParams
+            customer_address_id: opts.customerAddressId,
+            ...this.extraParams.queryParams
         }
         const headerParams = this.extraParams.headerParams || {}
+
         const formParams = {
         }
 
